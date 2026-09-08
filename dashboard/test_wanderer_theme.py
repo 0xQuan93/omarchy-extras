@@ -11,16 +11,22 @@ class ThemeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
             colors = path / 'colors.toml'
-            with patch.object(theme, 'THEME', path), patch.object(theme, '_signature', None), patch.object(theme, '_css', b''):
+            with patch.object(theme, 'THEME', path), patch.object(theme, '_signature', None), patch.object(theme, '_css', b''), patch.object(theme.subprocess, 'check_output') as resolve:
+                resolve.return_value = 'background\t#101010\nforeground\t#eeeeee\naccent\t#bb88ff\nmode\tdark\n'
                 colors.write_text('background = "#101010"\nforeground = "#eeeeee"\naccent = "#bb88ff"\n')
                 dark = theme.stylesheet()
                 self.assertIn(b'color-scheme:dark', dark)
                 self.assertIn(b'--background:#101010', dark)
                 colors.write_text('background = "#fafafa"\nforeground = "#202020"\naccent = "#553399"\nmode = "light"\n')
+                resolve.return_value = 'background\t#fafafa\nforeground\t#202020\naccent\t#553399\nmode\tlight\n'
                 light = theme.stylesheet()
                 self.assertIn(b'color-scheme:light', light)
                 self.assertIn(b'--background:#fafafa', light)
                 self.assertNotEqual(dark, light)
+                resolve.assert_called_with(['omarchy', 'theme', 'color', '--file', str(colors), '--all'], text=True, timeout=5)
+                self.assertEqual(resolve.call_count, 2)
+                self.assertEqual(theme.stylesheet(), light)
+                self.assertEqual(resolve.call_count, 2)
                 colors.unlink()
                 self.assertEqual(theme.stylesheet(), light)
 
