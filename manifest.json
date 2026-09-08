@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.0xQuan93.omarchy-extras",
+  "name": "Omarchy Extras",
+  "version": "1.0.0",
+  "author": "Quan (0xQuan93)",
+  "license": "MIT",
+  "description": "A compact bar menu for the Omarchy Extras desktop collection, setup guide, and optional local dashboard.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "BarWidget.qml"},
+  "barWidget": {
+    "displayName": "Omarchy Extras",
+    "category": "Desktop",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}

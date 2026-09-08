@@ -15,7 +15,32 @@ This is an independent community project. Older Waybar-based installations are n
 | `notifications` | Custom notification service with persistent popup/history handling | Replaces the stock notification service |
 | `theme` | Regalia ’89 palette and Signal Field wallpaper | Omarchy theme support |
 
-## Install
+## Marketplace plugin
+
+The marketplace installs the **Extras bar menu**. It links to setup instructions, the
+repository, and your optional local dashboard. It does not install or enable the
+collection's components, start services, change your theme, or replace notifications.
+Requires Omarchy Quattro/Quickshell and a default browser; no extra packages for the menu.
+
+```bash
+omarchy plugin add https://github.com/0xQuan93/omarchy-extras.git --enable
+```
+
+Click **Extras** to open the menu. Use Up/Down or Tab to select a link, Enter to
+open it, and Escape or an outside click to close. The dashboard link expects you
+to install the optional dashboard first. Opening external links uses your default browser.
+
+```bash
+omarchy bar move io.github.0xQuan93.omarchy-extras --section left
+omarchy plugin remove io.github.0xQuan93.omarchy-extras
+```
+
+Removing this menu leaves separately installed components intact; remove those using
+the component instructions below. Component manifests are installer inputs, not
+additional plugins automatically enabled by marketplace installation.
+
+## Optional components
+
 
 Clone this repository, review the source, and preview your chosen components:
 
