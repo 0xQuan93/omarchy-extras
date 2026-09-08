@@ -5,8 +5,8 @@ import qs.Ui
 
 Panel {
     id: root
-    moduleName: "io.github.0xQuan93.omarchy-extras"
-    ipcTarget: "io.github.0xQuan93.omarchy-extras"
+    moduleName: "io.github.0xquan93.omarchy-extras"
+    ipcTarget: "io.github.0xquan93.omarchy-extras"
     implicitWidth: button.implicitWidth
     implicitHeight: button.implicitHeight
     property int selected: 0

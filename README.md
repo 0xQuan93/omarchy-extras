@@ -31,8 +31,8 @@ open it, and Escape or an outside click to close. The dashboard link expects you
 to install the optional dashboard first. Opening external links uses your default browser.
 
 ```bash
-omarchy bar move io.github.0xQuan93.omarchy-extras --section left
-omarchy plugin remove io.github.0xQuan93.omarchy-extras
+omarchy bar move io.github.0xquan93.omarchy-extras --section left
+omarchy plugin remove io.github.0xquan93.omarchy-extras
 ```
 
 Removing this menu leaves separately installed components intact; remove those using
