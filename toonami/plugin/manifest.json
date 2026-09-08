@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"oxquan.toonami","name":"Toonami Aftermath","version":"1.0.0","author":"oxquan","description":"Live television guide and viewing mode","kinds":["bar-widget"],"entryPoints":{"barWidget":"BarWidget.qml"},"barWidget":{"displayName":"Toonami Aftermath","description":"Anime, cartoons and channel controls","category":"Media","allowMultiple":false}}

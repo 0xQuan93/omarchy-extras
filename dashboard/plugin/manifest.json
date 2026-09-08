@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "oxquan.home",
+  "name": "Quan Home",
+  "version": "1.0.0",
+  "author": "oxquan",
+  "description": "Your personal AI dashboard and machine readouts",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "BarWidget.qml"},
+  "barWidget": {"displayName": "Quan Home", "category": "AI", "allowMultiple": false}
+}

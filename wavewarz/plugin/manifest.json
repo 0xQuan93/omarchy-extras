@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "oxquan.wavewarz",
+  "name": "Wave Desk",
+  "version": "1.0.1",
+  "author": "0xQuan",
+  "description": "WaveWarZ battles, local recaps, and crypto prices",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "service": "Desktop.qml",
+    "barWidget": "Prices.qml"
+  },
+  "barWidget": {
+    "displayName": "SOL / ETH",
+    "category": "Info",
+    "allowMultiple": false
+  }
+}

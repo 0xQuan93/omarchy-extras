@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Explore a subject that interests you",
+    "topic": "Discovery",
+    "kind": "Reading prompt",
+    "source": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Special:Random",
+    "description": "Follow a reference, compare sources, and keep a note of what you learn. Replace this sample in readings.json with your own links.",
+    "prompt": "What would you like to understand better?"
+  }
+]

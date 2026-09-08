@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"oxquan.wanderer","name":"Wanderer's Desk","version":"1.0.0","author":"oxquan","description":"A quiet reading card on the desktop","kinds":["service"],"entryPoints":{"service":"Desktop.qml"}}

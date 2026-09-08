@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "oxquan.media",
+  "name": "Quan Radio",
+  "version": "1.0.0",
+  "author": "Omarchy",
+  "description": "Studio radio presets and desktop media controls",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Quan Radio",
+    "description": "MPRIS now-playing with playback controls",
+    "category": "Media",
+    "allowMultiple": false
+  }
+}
